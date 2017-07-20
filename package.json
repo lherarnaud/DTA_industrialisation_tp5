@@ -6,7 +6,9 @@
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest",
 		"test-ci": "npm t -- --coverage",
-		"lint": "eslint ./src ./index.*.js --ext .js"
+		"lint": "eslint ./src ./index.*.js --ext .js",
+		"android:dev": "ENVFILE=.env.dev react-native run-android",
+		"android:prod": "ENVFILE=.env.prod react-native run-android"
 	},
 	"dependencies": {
 		"lodash": "^4.17.4",
