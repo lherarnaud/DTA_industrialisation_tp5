@@ -3,8 +3,11 @@ import {
   ScrollView,
   Button,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
+
+import Config from 'react-native-config';
 
 import Info from '../components/Info';
 
@@ -70,6 +73,10 @@ export default class HomeScreen extends Component {
             onPress={this.navigateToState}
             title="State"
           />
+        </View>
+        <View style={styles.margin}>
+          <Text>Env: {Config.ENV}</Text>
+          <Text>Url: {Config.API_URL}</Text>
         </View>
       </ScrollView>
     );
